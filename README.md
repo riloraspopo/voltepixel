@@ -12,10 +12,10 @@
 4. flash module magisk yang ada didalam folder
 5. eksekusi command ini
 
-adb shell
-su
-resetprop ro.bootmode usbradio
-resetprop ro.build.type userdebug
+adb shell \
+su \
+resetprop ro.bootmode usbradio \
+resetprop ro.build.type userdebug \
 setprop sys.usb.config diag,diag_mdm,adb
 
 6. ubah usb config, file transfer <-> no transfer file
@@ -26,10 +26,10 @@ EfsTools.exe efsInfo
 8. jika ada error, pilih saja download dan install aplikasi yang di perlukan, sampai tidak ada error
 9. eksekusi ini
 
-EfsTools.exe writeFile -i mcfg_autoselect_by_uim -o /nv/item_files/mcfg/mcfg_autoselect_by_uim
+EfsTools.exe writeFile -i mcfg_autoselect_by_uim -o /nv/item_files/mcfg/mcfg_autoselect_by_uim \
 EfsTools.exe writeFile -i mcfg_autoselect_by_uim -o /nv/item_files/mcfg/mcfg_autoselect_by_uim -s 1
 
-EfsTools.exe uploadDirectory -i mcfg_sw.mbn -o / -v
+EfsTools.exe uploadDirectory -i mcfg_sw.mbn -o / -v \
 EfsTools.exe uploadDirectory -i mcfg_sw.mbn -o / -s 1
 
 10. -s 1 ini untuk sim kedua bila ingin mengaktikfkan volte nya juga
